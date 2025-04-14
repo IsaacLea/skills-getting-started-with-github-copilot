@@ -42,17 +42,11 @@
                     <p><strong>Max Participants:</strong> ${details.max_participants}</p>
                     <div>
                       <h5>Current Participants (${details.participants.length}):</h5>
-                      <button class="toggle-participants">Show/Hide Participants</button>
-                      <ul class="participants-list hidden">
+                      <ul class="participants-list">
                         ${participantsList}
                       </ul>
                     </div>
                   `;
-
-                  card.querySelector(".toggle-participants").addEventListener("click", () => {
-                    const list = card.querySelector(".participants-list");
-                    list.classList.toggle("hidden");
-                  });
 
                   activitiesList.appendChild(card);
                 }
